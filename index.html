@@ -4,9 +4,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-    <title>Пример когнитивного фильтра</title>
+    <title>Сognitive filter</title>
     <script src="modules/chart.js/dist/Chart.bundle.js"></script>
-    <!--<script src="modules/chart.js/samples/utils.js"></script>-->
+    <!---<script src="modules/chart.js/samples/utils.js"></script>-->
     <script src="modules/hammerjs/hammer.min.js"></script>
     <script src="modules/chartjs-plugin-zoom/chartjs-plugin-zoom.min.js"></script>
     <script src="modules/jquery/dist/jquery.min.js"></script>
@@ -48,8 +48,8 @@
             <input type='button' id="fullScreen" value="Full screen" onclick="resize(1)">
         </div>
         <div class="nav">
-            <input type="radio" name="myRadios"  value="1" checked/>[1/см]
-            <input type="radio" name="myRadios"  value="2" />[эВ]
+            <input type="radio" name="myRadios"  value="1" checked/>[1/cm]
+            <input type="radio" name="myRadios"  value="2" />[eV]
         </div>
     </div>
     <div id="second_cont">
@@ -71,21 +71,22 @@
         </div>
     </div>
     <div class="nav">
-        <input type="checkbox"  id="intens" value=1 onclick="click_intens()" checked>отображение интенсивности прозрачностью
+        <input type="checkbox"  id="intens" value=1 onclick="click_intens()" checked>display intensity by transparency
     </div>
     <div class="nav">
-        <input type="checkbox"  id="random" value=1 onclick="click_random()">отображение мультиплетов
+        <input type="checkbox"  id="random" value=1 onclick="click_random()"> display multiplets
     </div>
     <div class="nav">
         <table>
             <tr>
                 <td>
-                    Показать ширину:
+                    Show Width:
                 </td>
                 <td>
-                    <input type="radio" name="width" value="1"/>конфигурации<br>
-                    <input type="radio" name="width" value="2"/>конфигурации с атомными остатками<br>
-                    <input type="radio" name="width" value="3"/>термов<br>
+                    <input type="radio" name="width" value="1"/>configuration<br>
+                    <input type="radio" name="width" value="2"/>
+                    configurations with atomic residues<br>
+                    <input type="radio" name="width" value="3"/>terms<br>
                     <input type="radio" name="width" value="4" checked/>---<br>
                 </td>
             </tr>
@@ -95,11 +96,11 @@
         <div class='toolbar'>
             <div class="range">
                 <div id='min_container'>
-                    <b>Минимум (&#8491;)</b><br>
+                    <b>Minimum (&#8491;)</b><br>
                     <input type='text' id='min' value='0'>
                 </div>
                 <div id='max_container'>
-                    <b>Максимум (&#8491;)</b><br>
+                    <b>Maximum (&#8491;)</b><br>
                     <input type='text' id='max' value='0'>
                 </div>
                 <div class='top_div'>
@@ -107,16 +108,16 @@
                     <input type='button' id='filter' value='OK' class="bluebtn" onclick="show_selected()">
                 </div>
                 <div class='visible_container'>
-                    <input type='button' id='visible' value='Видимый спектр' class='bluebtn' onclick="show_visible()"><span style="width: 20px"></span>
-                    <input type='button' id='all' value='Весь спектр' class='bluebtn' onclick="show_all()">
+                    <input type='button' id='visible' value='Optical spectrum' class='bluebtn' onclick="show_visible()"><span style="width: 20px"></span>
+                    <input type='button' id='all' value='Complete spectrum' class='bluebtn' onclick="show_all()">
                 </div>
             </div>
         </div>
     </div>
     <div class="nav">
-            <b><label for="element">Элемент:</label></b>
-            <input type="text" size="15" id="element" value="Mn">
-            <input type='button' id='new_atom' value='OK' onclick="updateChart(1,0,0)">
+        <b><label for="element">Element:</label></b>
+        <input type="text" size="23" id="element" value="Mn">
+        <input type='button' id='new_atom' value='OK' onclick="updateChart(1,0,0)">
     </div>
 </div>
 
@@ -134,9 +135,9 @@
     </div>
 </div>
 <br><br>
-<div class="nav">
-    <div id="svg-holder" oncontextmenu="backtomain()"></div>
-</div>
+<!--<div class="nav">-->
+<!--    <div id="svg-holder" oncontextmenu="backtomain()"></div>-->
+<!--</div>-->
 
 <script src="spectr.js"></script>
 
